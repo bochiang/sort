@@ -255,6 +255,9 @@ int main()
             random(Q_array, arrlen);
             memcpy(I_array, Q_array, sizeof(int) * max_buffer_size);
             memcpy(M_array, Q_array, sizeof(int) * max_buffer_size);
+            Q_duration = 0;
+            I_duration = 0;
+            M_duration = 0;
 
             Q_start = clock();
             quicksort(Q_array, arrlen);  // øÏÀŸ≈≈–Ú
