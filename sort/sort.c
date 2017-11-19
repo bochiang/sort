@@ -109,14 +109,13 @@ void random(int array[], uint64_t len)
 
 void quicksort(int* A, int n)
 {
-	struct sbe
-	{
-		int beg;
-		int end;
-	};
+    typedef struct
+    {
+        int beg;
+        int end;
+    }sbe;
 
-	sbe* arr = new sbe[n];
-
+    sbe* arr = (sbe *)malloc(n * sizeof(sbe));
 	int  m;
 	int p;
 	int beg, end, i, j;
@@ -155,7 +154,7 @@ void quicksort(int* A, int n)
 		arr[m].end = end;
 	}
 
-	delete[] arr;
+	free(arr);
 }
 /************************************
 *º¯ÊıÃû£ºinsertion_sort
